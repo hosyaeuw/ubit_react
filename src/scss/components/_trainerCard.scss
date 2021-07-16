@@ -1,0 +1,58 @@
+.trainer_card {
+    width: 290px;
+    padding: 20px;
+
+    &:hover {
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        padding: 18px;
+    }
+
+    &__img {
+        height: 286px;
+        width: 250px;
+        margin-bottom: 20px;
+    }
+
+    &__name {
+        display: block;
+        width: 180px;
+        text-align: center;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        @include rubik;
+
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &__office {
+        font-size: 17px;
+        line-height: 23px;
+        margin-top: 12px;
+        color: #595959;
+    }
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .trainer_card {
+        width: 158px;
+        padding: 0;
+
+        &__img {
+            height: 182px;
+            width: 158px;
+            margin-bottom: 8px;
+        }
+
+        &__name {
+            width: 152px;
+            font-size: 16px;
+        }
+    }
+}

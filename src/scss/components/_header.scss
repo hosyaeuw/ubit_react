@@ -1,0 +1,316 @@
+.header {
+    flex: 0 0 auto;
+    position: relative;
+    background: linear-gradient(0, #232323 5.14%, #101010 100%);
+
+    &::after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 100px;
+        @include rubik;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 36px;
+        color: white;
+        background-repeat: no-repeat, no-repeat;
+    }
+
+    &.header-trainers,
+    &.header-news,
+    &.header-timetable,
+    &.header-sport,
+    &.header-contacts,
+    &.header-about_us,
+    &.header-groups,
+    &.header-admin,
+    &.header-profile {
+        min-height: 468px;
+        background-size: 100% 100%;
+    }
+
+    &.header-trainers {
+        background-image: url('../../static/header_trainers.png'), linear-gradient(0, #232323 5.14%, #101010 100%);
+
+        &::after {
+            content: 'Тренера';
+        }
+    }
+
+    &.header-profile {
+        background-image: linear-gradient(0, #232323 5.14%, #101010 100%);
+
+        &::after {
+            content: 'Профиль';
+        }
+    }
+
+    &.header-admin {
+        background-image: linear-gradient(0, #232323 5.14%, #101010 100%);
+
+        &::after {
+            content: 'Админ панель';
+        }
+    }
+
+    &.header-groups {
+        background-image: linear-gradient(0, #232323 5.14%, #101010 100%);
+
+        &::after {
+            content: 'Группы';
+        }
+    }
+
+    &.header-news {
+        background-image: url('../../static/header_news.png'), linear-gradient(0, #232323 5.14%, #101010 100%);
+
+        &::after {
+            content: 'Новости';
+        }
+    }
+
+    &.header-timetable {
+        background-image: url('../../static/header_timetable.png'), linear-gradient(0, #232323 5.14%, #101010 100%);
+
+        &::after {
+            content: 'Расписание';
+        }
+    }
+
+    &.header-sport {
+        background-image: url('../../static/header_sport.png'), linear-gradient(0, #232323 5.14%, #101010 100%);
+
+        &::after {
+            content: 'Спорт';
+        }
+    }
+
+    &.header-contacts {
+        background-image: url('../../static/header_about_us.png'), linear-gradient(0, #232323 5.14%, #101010 100%);
+
+        &::after {
+            content: 'Контакты';
+        }
+    }
+
+    &.header-about_us {
+        background-image: url('../../static/header_about_us.png'), linear-gradient(0, #232323 5.14%, #101010 100%);
+
+        &::after {
+            content: 'О нас';
+        }
+    }
+
+    &__social_logo {
+        position: relative;
+        height: 150px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+            background: white;
+            z-index: 1;
+        }
+
+        .burger {
+            display: none;
+        }
+
+        &__logo,
+        &__social {
+            z-index: 2;
+            position: absolute;
+        }
+
+        &__logo {
+            top: 24px;
+            left: 120px;
+            height: 84px;
+            width: 140px;
+        }
+
+        &__social {
+            top: 52px;
+            right: 96px;
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+
+            &-svg {
+                height: 24px;
+                width: 24px;
+                margin-right: 24px;
+            }
+        }
+    }
+
+    .menu {
+        margin: 0 auto;
+        width: 84%;
+        height: 92px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 10;
+        font-size: 19px;
+        line-height: 26px;
+        font-family: 'Open Sans';
+
+        &__close {
+            display: none;
+        }
+
+        &,
+        &-link {
+            color: white;
+            font-family: 'Open Sans';
+        }
+
+        &-link:hover {
+            border-bottom: 1px solid #D11B40;
+        }
+
+        &-block {
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        &__item {
+            cursor: pointer;
+
+            a {
+                padding-bottom: 4px;
+            }
+
+            .active {
+                border-bottom: 1px solid #D11B40;
+            }
+
+            &:not(:first-child) {
+                margin-left: 52px;
+            }
+        }
+
+        &__social {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .header {
+
+        &::after {
+            bottom: 60px;
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        &.header-trainers,
+        &.header-news,
+        &.header-timetable,
+        &.header-sport,
+        &.header-contacts,
+        &.header-about_us,
+        &.header-admin,
+        &.header-groups,
+        &.header-profile {
+            min-height: 252px;
+            background-image: linear-gradient(0, #232323 5.14%, #101010 100%);
+        }
+
+        &__social_logo {
+            height: 100px;
+
+            .burger {
+                display: block;
+                position: absolute;
+                z-index: 2;
+                bottom: 0;
+                right: 20px;
+            }
+
+            &::after {
+                clip-path: polygon(0 0, 100% 0, 30% 100%, 0 100%);
+            }
+
+            &__logo {
+                top: 20px;
+                left: 20px;
+                height: 62px;
+                width: 120px;
+            }
+
+            &__social {
+                display: none;
+            }
+        }
+
+        .menu {
+            &.show {
+                display: flex;
+            }
+
+            &__close {
+                display: block;
+                position: fixed;
+                top: 72px;
+                right: 20px;
+            }
+
+            margin: 0 auto;
+            z-index: 10;
+            position: fixed;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(0, #232323 5.14%, #101010 100%);
+
+            &-block {
+                margin: 0 auto;
+                display: block;
+                height: unset;
+                text-align: center;
+                width: 60%;
+            }
+
+            .menu-block+.menu-block {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                margin-bottom: 28px;
+            }
+
+            &__item {
+                margin: 0 auto;
+                margin-bottom: 30px;
+                width: 50%;
+                white-space: nowrap;
+
+                &:not(:first-child) {
+                    margin-left: auto;
+                }
+            }
+
+            &__social {
+                display: inline-flex;
+                margin: 0 auto;
+
+                &-svg {
+                    height: 28px;
+                    width: 28px;
+                    margin: 0 14px;
+                }
+            }
+        }
+    }
+}

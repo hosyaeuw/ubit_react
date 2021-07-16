@@ -1,0 +1,60 @@
+.home {
+    min-height: 80vh;
+    background: linear-gradient(180deg, #232323 5.14%, #101010 100%);
+    position: relative;
+    color: black;
+
+    &__letuchka {
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: calc(100% + 60px + 40px);
+        z-index: 5;
+    }
+
+    &__letuchka_logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 60vh;
+        width: 84vw;
+        opacity: 0.1;
+    }
+
+    &__btn {
+        &-wrapper {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .home {
+        width: 100%;
+        overflow: hidden;
+        min-height: 90vh;
+
+        &__letuchka {
+            top: 0;
+            height: 85vh;
+        }
+
+        &__letuchka_logo {
+            height: 40vh;
+            top: 40%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        &__btn {
+            &-wrapper {
+                display: inline-block;
+                position: absolute;
+                bottom: 5vh;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.trainers {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+
+        .trainer_card {
+            margin-right: 28px;
+            margin-bottom: 52px;
+        }
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .trainers {
+        &__items {
+            .trainer_card {
+                margin-right: 8px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

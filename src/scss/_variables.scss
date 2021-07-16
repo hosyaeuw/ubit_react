@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,500&display=swap');
+
+$black: #232323;
+$background: #ffdf8c;
+$gray-line: #f6f6f6;
+$orange: #fe5f1e;
+
+$container-width: 90%;
+
+$duration: 0.15s;
+
+@mixin rubik {
+    font-family: 'Rubik', sans-serif;
+  }

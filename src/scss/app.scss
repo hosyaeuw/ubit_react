@@ -1,0 +1,90 @@
+@import 'variables';
+@import 'normalize';
+
+@import 'components/all';
+@import 'pages/all';
+
+#root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_container {
+    padding: 100px 120px;
+}
+
+.main_content {
+    flex: 1 0 auto;
+}
+
+.enrollment {
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    border: none;
+    position: relative;
+    z-index: 5;
+
+    &.disabled {
+        color: rgba(255, 255, 255, 0.3);
+
+        &:hover::after {
+            background: none;
+        }
+
+        &::after {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+
+        }
+    }
+
+    &:hover::after {
+        background: linear-gradient(95.6deg, #FF6080 -10.34%, #D11B40 128.69%);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: -22px;
+        height: calc(100% + 20px);
+        width: calc(100% + 40px);
+        border: 2px solid #D11B40;
+        transform: skew(-20deg);
+        z-index: -1;
+    }
+}
+
+.close_btn {
+    width: 48px;
+    height: 48px;
+    background: white;
+    color: #232323;
+    font-size: 40px;
+    line-height: 48px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        background: linear-gradient(95.6deg, #FF6080 -10.34%, #D11B40 128.69%);
+    }
+}
+
+.form__field {
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .main_container {
+        padding: 50px 20px;
+    }
+}
+
+button{
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid black;
+    background: unset;
+}

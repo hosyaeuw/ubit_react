@@ -1,0 +1,53 @@
+.auth {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #232323 5.14%, #101010 100%);
+
+    &-wrapper {
+        width: 16%;
+    }
+
+    h1 {
+        text-align: center;
+        @include rubik;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+        color: white;
+    }
+
+    &__form {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__btn {
+        padding: 10px 20px;
+        background: transparent;
+        border: 2px solid #D11B40;
+        color: white;
+        margin-top: 12px;
+        cursor: pointer;
+
+        &:hover {
+            background: linear-gradient(95.6deg, #FF6080 -10.34%, #D11B40 128.69%);
+        }
+
+        &-wrapper {
+            text-align: right;
+            padding: 0 12px;
+        }
+    }
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .auth {
+        &-wrapper {
+            width: 50%;
+        }
+    }
+}

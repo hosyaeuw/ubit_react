@@ -1,0 +1,32 @@
+.timetable_card {
+    width: 215px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 24px;
+
+    p {
+        margin-bottom: 5px;
+        line-height: 1.8em;
+    }
+
+    &__age,
+    &__days {
+        @include rubik;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .timetable_card {
+        width: 170px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    }
+}

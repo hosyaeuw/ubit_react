@@ -1,0 +1,17 @@
+.popup_timetable {
+    width: 90vw;
+    min-height: 30vh;
+    background: white;
+    padding: 42px;
+
+    &__close {
+        top: -88px;
+        right: 0px;
+        position: absolute;
+    }
+
+    &__title{
+        text-align: center;
+        margin-bottom: 42px;
+    }
+}

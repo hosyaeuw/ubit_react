@@ -1,0 +1,26 @@
+.groups {
+    display: flex;
+
+    &__item {
+        border: 1px solid rgba(0, 0, 0, 0);
+
+        &:hover {
+            border: 1px solid black;
+        }
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .groups {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+
+        &__item {
+            a{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

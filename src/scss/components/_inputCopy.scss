@@ -1,0 +1,31 @@
+.input_copy {
+    height: 2em;
+
+    &__text {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &__block {
+        position: absolute;
+        width: 52vw;
+        height: 50px;
+        background: #fff;
+        padding: 2px 5px;
+        // border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__input {
+        font-size: 17px;
+        line-height: 25px;
+        width: 38vw;
+        height: 28px;
+    }
+
+    button{
+        height: 28px;
+    }
+}

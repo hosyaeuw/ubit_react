@@ -1,0 +1,10 @@
+export { default as TrainerForm } from './TrainerForm';
+export { default as NewsForm } from './NewsForm';
+export { default as DancerForm } from './DancerForm';
+export { default as GroupForm } from './GroupForm';
+export { default as LessonForm } from './LessonForm';
+export { default as TimetableForm } from './TimetableForm';
+export { default as LessonTimeForm } from './LessonTimeForm';
+export { default as AlertsForm } from './AlertsForm';
+export { default as PaymentForm } from './PaymentForm';
+export { default as RecordsForm } from './RecordsForm';

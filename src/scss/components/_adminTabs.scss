@@ -1,0 +1,36 @@
+.admin__tabs {
+    display: flex;
+
+    &__tab {
+        padding: 3px 6px;
+        color: rgb(0, 173, 253);
+    }
+
+    .tab-active {
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-top-left-radius: 10%;
+        border-top-right-radius: 10%;
+        border-bottom: none;
+    }
+
+    &__select {
+        position: relative;
+
+        &:hover &__submenu {
+            display: block;
+        }
+
+        &__submenu {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            width: 100%;
+
+            li {
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}

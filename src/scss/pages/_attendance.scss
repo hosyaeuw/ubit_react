@@ -1,0 +1,75 @@
+.attendance {
+    overflow-x: auto;
+
+    &__form {
+        margin: 20px 0;
+
+        &__field {
+            margin: 0 12px;
+        }
+    }
+
+    &__table {
+        border-spacing: 0;
+        width: 100%;
+
+        svg {
+            cursor: pointer;
+        }
+
+        &,
+        th,
+        td {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            height: 50px;
+            white-space: nowrap;
+        }
+
+        th,
+        .name {
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            color: rgb(0, 173, 253);
+        }
+
+        input {
+            opacity: 0;
+        }
+
+        .attendance {
+            display: block;
+            height: 100%;
+
+            &.present {
+                background: green;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .attendance {
+        &__form {
+            display: flex;
+            justify-content: center;
+
+            &-wrapper {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &__field {
+                margin: 12px 0;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

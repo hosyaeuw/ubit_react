@@ -1,0 +1,13 @@
+.personal_data {
+    .list {
+        margin-left: 20px;
+
+        &__item {
+            list-style: square;
+        }
+    }
+
+    &__paragraph {
+        padding: 8px 0;
+    }
+}
